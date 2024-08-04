@@ -1,0 +1,1044 @@
+@charset "UTF-8";
+/* ＝＝＝＝＝＝＝＝＝＝＝
+共通設定
+＝＝＝＝＝＝＝＝＝＝＝＝ */
+html {
+    font-size: 100%;
+}
+body {
+    color: #121212;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+a {
+    color: #121212;
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+li {
+    list-style: none;
+}
+    
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 80px 0 60px 0;
+}
+.spaced-paragraph{
+    margin-bottom: 1rem;
+}
+h4 {
+    margin-bottom: 30px;
+    line-height: 1;
+}
+
+#service, #export, #sdgs {
+    background-color: rgb(250, 250, 250);
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝＝
+header
+＝＝＝＝＝＝＝＝＝＝＝＝ */
+#header {
+    width: 100%;
+    height: 60px;
+    /* justify-content: space-around; */
+    /* padding: 8px 200px; */
+    position: fixed;
+    z-index: 10;
+    background-color: #fff;
+    /* border: 3px solid red; */
+    box-shadow: 0px 1px 5px rgb(200, 200, 200);
+}
+
+.header-container {
+    display: flex;
+    max-width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 4px 0;
+}
+h1 {
+    display: flex;
+    max-width:50%;
+}
+.site-logo{
+    display: flex;
+}
+.logo-text, .logo {
+    object-fit: contain;
+}
+
+.usedcar-top {
+    max-width: 45%;
+    display: inline-block;
+    padding: 6px 10px;
+    text-decoration: none;
+    background: #FF4D00;
+    color: #FFF;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 5%;
+    position: relative;
+    overflow: hidden;
+}
+/* きらっと光る */
+.usedcar-top::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+    transform: skewX(-25deg);
+}
+
+/* hoverした際の移動のアニメーション */
+.usedcar-top:hover::before {
+    animation: shine 0.7s;
+}
+
+@keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+
+.usedcar-top a {
+    color: inherit;
+    font-size: 1.1rem;
+}
+.header-menu {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* ハンバーガーメニュー */
+#navi {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    bottom: 0;
+    max-width: 300px;
+    color: #fff;
+    padding: 16px;
+    background-color: #36A9A5;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: all 0.5s;
+    z-index: 20;
+    opacity: 0;
+    font-size: 1.0rem;
+    font-weight: bold;
+}
+
+#navi a {
+    color: #fff;
+}
+.open #navi {
+    left: 0;
+    opacity: 1;
+}
+#navi ul {
+    margin: 0;
+    padding: 0;
+}
+#navi ul.nav-menu {
+    margin-bottom: 60px;
+    border-top: solid 1px #fff;
+}
+#navi ul.nav-menu li {
+    position: relative;
+    margin: 0;
+    padding: 16px 4px;
+    border-bottom: solid 1px #fff;
+}
+
+.toggle_btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 2px;
+    transition: all 0.5s;
+    cursor: pointer;
+    z-index: 20;
+    position: relative;
+    background-color: #339390;
+}
+
+.toggle_btn span {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 70%;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 4px;
+    transition: all 0.5s;
+}
+.toggle_btn span:nth-child(1) {
+    top: 25%;
+    left: 15%;
+}
+.toggle_btn span:nth-child(2) {
+    top: 50%;
+    left: 15%;
+}
+.toggle_btn span:nth-child(3) {
+    top: 75%;
+    left: 15%;
+}
+.open .toggle_btn span {
+    background-color: #fff;
+}
+.open .toggle_btn span:nth-child(1) {
+    top: 50%;
+    -webkit-transform:rotate(-315deg);
+    transform:rotate(-315deg);
+}
+.open .toggle_btn span:nth-child(2) {
+    opacity: 0;
+}
+.open .toggle_btn span:nth-child(3) {
+    top: 50%;
+    -webkit-transform:rotate(315deg);
+    transform:  rotate(315deg);
+}
+
+#mask {
+    display: none;
+    transition: all 0.5s;
+}
+
+.open #mask {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #9f9f9fcb;
+    opacity: 0.8;
+    z-index: 10;
+    cursor: pointer;
+}
+
+
+/* ＝＝＝＝＝＝＝＝＝＝＝
+mainvisual
+＝＝＝＝＝＝＝＝＝＝＝＝ */
+.mainvisual {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/mainvisual.jpg);
+    background-size: cover;
+    background-position: center top;
+    box-shadow: 0px 5px 10px rgb(145, 145, 145);
+    position: relative;
+    font-size: 1.1rem;
+}
+.catch-phrase1, .catch-phrase2 {
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 2px 2px 0px gray;
+    position: absolute;
+    left: 15%;
+}
+.catch-phrase1 {
+    top: 30%;
+}
+.catch-phrase2 {
+    top: 65%;
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝＝
+ABOUT US
+＝＝＝＝＝＝＝＝＝＝＝＝ */
+.about-logo {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0 60px 0;
+}
+
+.about-list {
+    background-color: #339390;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    line-height: 1.1;
+    font-size: 1.3rem;
+    width: 20%;
+}
+
+.list-title1 {
+    margin: 8% 0 5% 0;
+}
+.list-title2{
+    margin: 5% 0 0 0;
+}
+
+.business-title {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    /* border-bottom: 1px solid #121212; */
+    margin-bottom: 8px;
+    height: 32px;
+    line-height: 32px;
+}
+.car-logo {
+    margin-top: auto;
+}
+
+.business-title span {
+    margin-left: 8px;
+    font-weight: bold;
+}
+
+.business-title img{
+width: 32px;
+height: 32px;
+object-fit:contain;
+}
+
+.business-intro {
+    display: flex;
+    justify-content: space-between;
+}
+
+.business {
+    background-color: #82cbc9a5;
+    width: 48%;
+    padding: 40px 50px;
+    margin-bottom: 60px;
+}
+
+h5 {
+    font-size: 1.4rem;
+    text-shadow: 0px 5px 8px #fff;
+}
+
+.business img {
+    margin: 20px 0;
+    box-shadow: 1px 10px 20px gray;
+}
+
+.business-btn {
+    background-color: #36A9A5;
+    border: 3px solid #339390;
+    width: 100%;
+    border-radius: 20px;
+    padding: 8px 0;
+    transition: 0.1s, 0.1s;
+}
+
+.business-btn:hover{
+    background-color: #339390;
+}
+
+.business-btn a {
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.business-btn a:hover {
+    color: #fff;
+}
+
+.number-title {
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+.number-text {
+    margin: 16px auto;
+}
+
+.number {
+    padding: 8px 16px;
+    background-color: #fff;
+    border: 3px solid #FF4D00;
+    max-width: 600px;
+    color: #FF4D00;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+
+/* ＝＝＝＝＝＝＝＝＝＝＝
+Service
+＝＝＝＝＝＝＝＝＝＝＝＝ */
+.service-list {
+    display: grid;
+    gap: 1%;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.icon {
+    width: 100%;
+    background-color: #fff;
+    color: #339390;
+    font-weight: bold;
+    padding: 16px;
+    border: 5px solid #339390;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+
+.icon-title {
+    margin-bottom: 12px;
+}
+
+.sub-title {
+    text-decoration: underline;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.inner {
+    max-width: 1000px;
+    padding: 20px 0;
+    display: flex;
+    margin: 0 auto;
+}
+.service-item {
+    border-top: 1px solid #121212;
+}
+.service-item:last-of-type {
+    border-bottom: 1px solid #121212;
+}
+.sub-number {
+    font-size: 0.8rem;
+    margin-right: 4px;
+}
+.number-name{
+    width: 45%;
+    display: flex;
+    font-size: 1.4rem;
+}
+.slide-img {
+    width: 25%;
+    order:2;
+}
+.subservice-text {
+    order:1;
+    width: 30%;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.service-sub{
+    padding-bottom: 60px;
+}
+
+/* ＝＝ボタン動き＝＝ */
+.subservice-text a {
+    margin-top: auto;
+    position: relative; 
+    overflow: hidden;
+    color: #339390;
+    border: 3px solid #339390;
+    background-color: #fff;
+    display: inline-block;
+    text-align: center;
+    border-radius: 16px;
+    padding: 2px 0;
+    width: 100%;
+    transition: color 0.5s;
+}
+
+.subservice-text a span {
+    position: relative;
+    z-index: 2; 
+    color: #339390; 
+    transition: color 0.5s; 
+}
+
+.subservice-text a:hover span {
+    color: #fff; 
+}
+
+.subservice-text a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%; 
+    width: 100%;
+    height: 100%;
+    background-color: #339390;
+    transition: left 0.5s;
+    z-index: 1;
+}
+
+.subservice-text a:hover::before {
+    left: 0;
+}
+
+
+/* ＝＝＝＝＝＝＝＝＝＝＝
+various
+＝＝＝＝＝＝＝＝＝＝＝＝ */
+.various-img {
+    object-fit: cover;
+    margin-top: 30px;
+    /* height: 490px; */
+    width: 100%;
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝＝
+export
+＝＝＝＝＝＝＝＝＝＝＝＝ */
+.export-contain {
+    display: flex;
+    justify-content: space-between;
+}
+.export-contain img {
+    width: 48%;
+    object-fit: cover;
+}
+.export-text {
+    width: 48%;
+    text-align: left;
+}
+
+
+/* ＝＝＝＝＝＝＝＝＝＝＝
+used
+＝＝＝＝＝＝＝＝＝＝＝＝ */
+.used-img {
+    border: 10px solid #fff;
+    max-width: 100%;
+    object-fit: cover;
+}
+.used-img:hover {
+    border: 10px solid #FFDA3F;
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝＝
+sdgs
+＝＝＝＝＝＝＝＝＝＝＝＝ */
+#sdgs {
+    position: relative;
+    height: calc(100vh - 60px);
+}
+
+#sdgs::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/sdgs.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.1;
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝＝
+access
+＝＝＝＝＝＝＝＝＝＝＝＝ */
+.address-container {
+    display: flex;
+    justify-content: space-between;
+}
+.address {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0 20px; 
+    box-sizing: border-box; 
+    text-align: left; 
+}
+.company span {
+    font-size: 1.4rem;
+    text-decoration: underline;
+    line-height: 2;
+}
+
+
+/* ＝＝＝＝＝＝＝＝＝＝＝
+footer
+＝＝＝＝＝＝＝＝＝＝＝＝ */
+footer {
+    background-color: #82cbc9a5;
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.footer-menu {
+    display: grid;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    font-weight: bold;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px 10px;
+    text-align: center;
+}
+
+.footer-menu a:hover {
+    color: #FF4D00;
+}
+
+.footer-logo {
+    display: block;
+    text-align: center;
+}
+.footer-logo img {
+    max-width: 30%;
+    object-fit: cover;
+    display: inline-block;
+}
+
+.copy-light {
+    font-size: 0.7rem;
+    text-align: center;
+    padding: 4px 0;
+}
+
+.fadein {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1.8s;
+}
+
+.floatUp {
+    animation-name: floatUp;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes floatUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.rotateX{
+	animation-name:rotateXAnime;
+	animation-duration:1.5s;
+	animation-fill-mode:forwards;
+}
+
+@keyframes rotateXAnime{
+	from{
+		transform: rotateX(0);
+		}
+	to{
+		transform: rotateX(-360deg);
+		}
+}
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝
+MAINTENANCE ＆ INSPECTION
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+.colored {
+    color: #FF4D00;
+}
+#meintenance {
+    padding: 40px 0 60px 0;
+}
+.meintenamce-text {
+    margin-bottom: 80px;
+    text-align: left;
+}
+
+.meintenance-item {
+    padding-top: 60px;
+    margin-bottom: 60px;
+    text-align: left;
+}
+.meintenance-title {
+    width: 30%;
+    display: flex;
+    color: #fff;
+    padding: 2px 8px;
+    margin-bottom: 20px;
+    font-size: 1.9rem;
+    background: rgb(54,169,165);
+    background: linear-gradient(90deg, rgba(54,169,165,1) 0%, rgba(155,212,210,1) 75%, rgba(255,255,255,1) 100%);
+}
+
+.ment-number {
+    margin-right: 8px;
+}
+
+.meintenance-container1 {
+    display: flex;
+    justify-content: space-between;
+}
+.meintenance-container1 img,.meintenance-container1 p {
+    width: 48%;
+    object-fit: cover;
+}
+.meintenance-container1 img {
+    box-shadow: 16px 16px 0px #82cbc9a5;
+}
+
+.meintenance-container1 p {
+    text-align: left;
+}
+.meintenance2-img {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2%;
+    margin-top: 20px;
+}
+.meintenance-container3 {
+    display: flex;
+
+}
+.ment3-text {
+    width: 50%;
+    margin-left: 5%;
+}
+.meintenance-container3  img {
+    width: 25%;
+    box-shadow: 16px 16px 0px #82cbc9a5;
+    position: relative;
+}
+h7 {
+    font-size: 1.3rem;
+    color: #339390;
+    text-decoration: underline;
+    margin-bottom: 4px;
+    margin-top: 20px;
+}
+.ment2-intro {
+    margin-bottom: 40px;
+}
+.base-img {
+    position: relative;
+    z-index: 1;
+}
+.pile-img {
+    position: absolute;
+    top: 80px;
+    left: -8%;
+    z-index: 2;
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝
+レシポンシブ設定 
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+@media (max-width: 1000px) {
+
+    .container {    
+        padding: 60px 20px 40px 20px;
+    }
+    body {
+        font-size: 1.1rem;
+        line-height: 1.2;
+    }
+/* ＝＝＝＝header＝＝＝＝＝＝＝＝＝ */
+    .header-container {
+        padding: 6px 20px;
+    }
+    #header {
+        height: 40px;
+    }
+    .usedcar-top {
+        padding: 8px 16px;
+        display: flex;
+    }
+    
+    .usedcar-top a{
+        font-size: 0.8rem;
+
+    }
+    #navi {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+
+    #navi ul.nav-menu li  {
+        padding: 14px 8px;
+    }
+    .toggle_btn {
+        width: 32px;
+        height: 32px;
+    }
+    
+/* ＝＝＝＝ABOUT US＝＝＝＝＝＝＝＝ */
+    .about-list {
+        font-size: 1.0rem;
+    }
+
+    .business {
+        margin-bottom: 40px;
+        padding: 20px;
+    }
+    h5 {
+        font-size: 1.2rem;
+    }
+/* ＝＝＝＝SERVICE＝＝＝＝＝＝＝＝ */
+.service-list {
+    grid-template-columns: repeat(3, 1fr);
+}
+.inner {
+    padding: 20px;
+}
+.number-name {
+    font-size: 1.2rem;
+}
+.subservice-text {
+    font-size: 1.0rem;
+}
+/* ＝＝＝＝EXPORT＝＝＝＝＝＝＝＝ */
+.export-contain {
+    flex-direction: column;
+}
+.export-contain img, .export-text{
+    width: 100%;
+    margin-bottom: 28px;
+}
+.sdgs-text {
+    font-size: 2vw;
+}
+/* ＝＝＝＝ACCESS＝＝＝＝＝＝＝＝ */
+    .address-container {
+        line-height: 1.3;
+    }
+    .company span{
+        font-size: 1.3rem;
+    }
+    .footer-menu {
+        font-size: 1.0rem;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .meintenance-item {
+        padding-top: 40px;
+    }
+/* ＝＝＝meintenance＝＝＝＝ */
+
+}
+@media(max-width: 820px){
+    .about-text {
+        font-size: 2.3vw;
+        text-align: left;
+    }
+    .about-text br {
+        display: none;
+    }
+    .meintenance-title {
+        width: 37%;
+    }
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+タブレットサイズ
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+@media (max-width: 768px) {
+    .container {
+        padding: 40px 10px;
+    }
+    body {
+        font-size: 0.9rem;
+        line-height: 1.2;
+    }
+/* ＝＝＝＝header＝＝＝＝＝＝＝＝＝ */
+    .header-container {
+        padding: 4px 10px;
+    }
+    .mainvisual {
+        font-size: 1rem;
+    }
+    .usedcar-top {
+        display: none;
+    }
+    .about-list {
+        font-size: 0.8rem;
+        width:22%;
+    }
+    .about-text {
+        font-size: 2.5vw;
+        text-align: left;
+    }
+    .about-text br {
+        display: none;
+    }
+
+    .about-list img{
+        max-width: 60%;
+    }
+    .business {
+        padding: 20px 10px;
+    }
+
+    .service-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .icon-title {
+        font-size: 2.8vw;
+    }
+    .inner {
+        flex-direction: column;
+    }
+    .subservice-text {
+        font-size: 0.9rem;
+        width: 100%;
+    }
+    .subservice-text p {
+        margin-bottom: 10px;
+    }
+    .subservice-text a{
+        padding: 5px 0;
+    }
+    .slide-img {
+        width: 100%;
+        order: 1;
+        margin: 20px 0 10px 0;
+    }
+    .sdgs-text {
+        font-size: 2.8vw;
+        /* text-align: left; */
+    }
+
+    .address-container {
+        flex-direction: column;
+    }
+    .address {
+        padding: 0 ; 
+    }
+    .footer-menu {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+/* ＝＝＝meintenance＝＝＝ */
+.meintenance-title {
+    font-size: 1.3rem;
+}
+.meintenance-container1 img,.meintenance-container1 p {
+    width: 46%;
+    object-fit: cover;
+}
+.pile-img {
+    top: 48px;
+}
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝
+スマホサイズ
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+@media (max-width: 480px) {
+    .container {
+        padding: 40px 5px;
+    }
+    body {
+        font-size: 3vw;
+        line-height: 1.2;
+    }
+/* ＝＝＝＝header＝＝＝＝＝＝＝＝＝ */
+    .header-container {
+        padding: 5px 10px;
+    }
+
+    .container {
+        padding: 40px 10px;
+    }
+    .mainvisual {
+        font-size: 3vw;
+    }
+    .catch-phrase1, .catch-phrase2 {
+        left: 18%;
+        text-align: center;
+    }
+
+    .business {
+        padding: 10px 16px;
+    }
+    .list-title1, .list-title2 {
+        font-size: 1.8vw;
+    }
+    .number-text {
+        margin: 8px 0;
+    }
+    .about-logo {
+        margin: 16px 0 28px 0;
+        h5{
+            font-size: 3.6vw;
+        }
+        .business-btn{
+            padding: 4px 6px;
+            font-size: 2.5vw;
+        }
+        .business img{
+            margin: 10px 0;
+        }
+        .number-text {
+            font-size:2.5vw;
+        }
+    }     
+    .service-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .icon img{
+        width: 70%;
+    }
+
+    .subservice-text {
+        font-size: 3.2vw;
+    }
+    .various-text {
+        text-align: left;
+    }
+    .address-container {
+        flex-direction: column;
+    }
+    .map {
+        margin-bottom: 20px;
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-top: 50%;
+    }
+    /* Google Mapのiframe */
+    .map iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .footer-menu {
+        font-size: 0.9rem;
+    }
+    #meintenance {
+        padding: 60px 0 0 0;
+    }
+    .meintenance-title {
+        font-size: 4vw;
+        width: 40%;
+    }
+    h7 {
+        font-size: 3vw;
+    }
+    .pile-img {
+        top: 40px;
+    }
+}
