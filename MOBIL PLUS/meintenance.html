@@ -6,7 +6,7 @@
     <title>MOBIL PLUS</title>
     <meta name="description" content="テキストテキストテキストテキストテキストテキストテキストテキス">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="">
+    <link rel="icon" href="img/favicon.png">
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,8 +21,10 @@
         <div class="header-container">
             <h1 class="site-title">
                 <a class="site-logo" href="index.html">
-                    <img class="logo" src="img/logo.png" alt="モービルプラスロゴ">
-                    <img class="logo-text" src="img/logo-text.png" alt="mobil plus">
+                    <picture class="header_pic">
+                        <source srcset="img/header-logo.webp" type="image/webp">
+                        <img loading="lazy" src="/img/header-logo" alt="モービルプラスロゴ" class="header-logo">
+                    </picture>
                 </a>
             </h1>
             <div class="header-menu">
@@ -76,7 +78,10 @@
                         <h6>重整備対応</h6>
                     </div>
                     <div class="meintenance-container1">
-                        <img src="img/engine.jpg" alt="エンジンの重整備">
+                        <picture class="engine_pic">
+                            <source srcset="img/engine.webp" type="image/webp">
+                            <img loading="lazy" class="engine" src="img/engine.jpg" alt="エンジンの重整備">
+                        </picture>
                         <p>「モービルプラス」は、<span class="colored">エンジンの載せ替えやオーバーホール</span>
                             などの重整備から、最新のディーゼル車の触媒洗浄まで、幅広い自動車整備サービスを提供する
                             専門工場です。高い技術力を持つ熟練の整備士が在籍し、確かな品質でお客様の愛車を最良の状態に保ちます。
@@ -100,10 +105,22 @@
                             これにより、確実な整備が可能となり、
                             お客様に安心してご利用いただけるサービスを提供します。</p>
                         <div class="meintenance2-img">
-                            <img src="img/tester1.jpg" alt="最新のテスター">
-                            <img src="img/tester2.jpg" alt="テスターの操作">
-                            <img src="img/tester3.jpg" alt="テスターのセット">
-                            <img src="img/tester4.jpg" alt="テスタータブレット">
+                            <picture>
+                                <source srcset="img/tester1.webp" type="image/webp">
+                                <img loading="lazy" src="img/tester1.jpg" alt="最新のテスター">
+                            </picture>
+                            <picture>
+                                <source srcset="img/tester2.webp" type="image/webp">
+                                <img loading="lazy" src="img/tester2.jpg" alt="テスターの操作">
+                            </picture>
+                            <picture>
+                                <source srcset="img/tester3.webp" type="image/webp">
+                                <img loading="lazy" src="img/tester3.jpg" alt="テスターのセット">
+                            </picture>
+                            <picture>
+                                <source srcset="img/tester4.webp" type="image/webp">
+                                <img loading="lazy" src="img/tester4.jpg" alt="テスタータブレット">
+                            </picture>
                         </div>
                     </div>
                 </section>
@@ -113,8 +130,14 @@
                         <h6>積載車保有</h6>
                     </div>
                     <div class="meintenance-container3">
-                        <img class="base-img" src="img/transcar1.jpg" alt="積載車">
-                        <img class="pile-img" src="img/transcar2.jpg" alt="フラットタイプの積載車">
+                        <picture class="transcar1_pic">
+                            <source srcset="img/transcar1.webp" type="image/webp">
+                            <img class="base-img" src="img/transcar1.jpg" alt="積載車">
+                        </picture>
+                        <picture class="transcar2_pic">
+                            <source srcset="img/transcar2.webp" type="image/webp">
+                            <img class="pile-img" src="img/transcar2.jpg" alt="フラットタイプの積載車">
+                        </picture>
                         <p class="ment3-text"> 弊社保有の積載車は車載部分がフルフラットになるタイプですので、車高の低い特殊な車種にも対応可能です。</p>
                     </div>
                 </section>
@@ -135,7 +158,10 @@
                 <li><a href="index.html#access">アクセス</a></li>
             </ul>
             <a href="index.html" class="footer-logo">
-                <img src="./img/full-logo.png" alt="北九州の自動車整備工場">
+                <picture>
+                    <source srcset="img/full-logo.webp" type="image/webp">
+                    <img loading="lazy" src="./img/full-logo.png" alt="北九州の自動車整備工場">
+                </picture>
             </a>
         </div>
         <div class="copy-light">© 2024 MOBIL PLUS</div>

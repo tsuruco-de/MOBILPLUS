@@ -3,11 +3,12 @@
 共通設定
 ＝＝＝＝＝＝＝＝＝＝＝＝ */
 html {
-    font-size: 100%;
+    font-size: 62.5%;
+    /* 1rem=10px */
 }
 body {
     color: #121212;
-    font-size: 1.3rem;
+    font-size: 2.0rem;
     line-height: 1.5;
     font-family: 'Noto Sans JP', sans-serif;
 }
@@ -18,27 +19,36 @@ a {
 img {
     max-width: 100%;
 }
-
 li {
     list-style: none;
 }
-    
 .container {
     max-width: 1000px;
     margin: 0 auto;
     text-align: center;
-    padding: 80px 0 60px 0;
+    padding: 80px 0;
 }
 .spaced-paragraph{
     margin-bottom: 1rem;
 }
+h2 {
+    font-size: 2.8rem;
+}
 h3 {
-    font-size: 1.8rem;
+    font-size: 3.6rem;
 }
 h4 {
-    font-size: 1.4rem;
-    margin-bottom: 30px;
+    font-size: 2.6rem;
+    margin-bottom: 60px;
     line-height: 1;
+}
+h5 {
+    font-size: 2.4rem;
+    border-bottom: 2px solid black;
+    display: inline-block;
+}
+h6 {
+    font-size: 2.4rem;
 }
 
 #service, #export, #sdgs {
@@ -59,7 +69,6 @@ header
 
 .header-container {
     display: flex;
-    border: 1px solid red;
     max-width: 1000px;
     height: 100%;
     margin: 0 auto;
@@ -69,26 +78,17 @@ header
     max-width:50%;
 }
 .site-logo{
-    display: flex;
-    align-items: center;
     max-width: 600px;
 }
-.logo {
+.header_pic {
+    display: flex;
+    align-items: center;
     object-fit: cover;
-    width: 160px;
-    /* width: 100%; */
-    padding-bottom: 5px;
-}
-.logo-text{
-    object-fit: cover;
-    width: 600px;
-    /* width: 100%; */
-    padding-bottom: 10px;
+    height: 100%;
 }
 
-    .logo source {
+.header_pic source {
     max-width: 100%;
-    /* border: 1px solid red; */
 }
 
 .usedcar-top {
@@ -130,7 +130,7 @@ header
 
 .usedcar-top a {
     color: inherit;
-    font-size: 1.1rem;
+    font-size: 1.6rem;
 }
 .header-menu {
     display: flex;
@@ -155,7 +155,7 @@ header
     transition: all 0.5s;
     z-index: 20;
     opacity: 0;
-    font-size: 1.0rem;
+    font-size: 1.8rem;
     font-weight: bold;
 }
 
@@ -261,7 +261,6 @@ mainvisual
     background-position: center top;
     box-shadow: 0px 5px 10px rgb(145, 145, 145);
     position: relative;
-    font-size: 1.1rem;
 }
 .catch-phrase1, .catch-phrase2 {
     color: #fff;
@@ -292,7 +291,6 @@ ABOUT US
     color: white;
     text-align: center;
     line-height: 1.1;
-    font-size: 1.3rem;
     width: 20%;
 }
 
@@ -313,7 +311,7 @@ ABOUT US
     line-height: 32px;
 }
 .car-logo {
-    margin-top: auto;
+    margin-top: 10px;
 }
 
 .business-title span {
@@ -337,11 +335,6 @@ object-fit:contain;
     width: 48%;
     padding: 40px 50px;
     margin-bottom: 60px;
-}
-
-h5 {
-    font-size: 1.4rem;
-    text-shadow: 0px 5px 8px #fff;
 }
 
 .business img {
@@ -409,7 +402,7 @@ Service
     padding: 16px;
     border: 5px solid #339390;
     border-radius: 10px;
-    font-size: 1rem;
+    font-size: 1.6rem;
 }
 
 
@@ -436,13 +429,13 @@ Service
     border-bottom: 1px solid #121212;
 }
 .sub-number {
-    font-size: 0.8rem;
+    font-size: 1.6rem;
     margin-right: 4px;
 }
 .number-name{
     width: 45%;
     display: flex;
-    font-size: 1.4rem;
+    font-size: 2.6rem;
 }
 
 .slide_pic{
@@ -523,7 +516,6 @@ export
 .export-contain {
     display: flex;
     justify-content: space-between;
-    border: 1px solid red;
 }
 
 .export-text {
@@ -567,6 +559,10 @@ sdgs
     opacity: 0.1;
 }
 
+.sdgs-text {
+    padding-bottom: 80px;
+}
+
 /* ＝＝＝＝＝＝＝＝＝＝＝
 access
 ＝＝＝＝＝＝＝＝＝＝＝＝ */
@@ -584,7 +580,7 @@ access
     text-align: left; 
 }
 .company span {
-    font-size: 1.4rem;
+    font-size: 2.6rem;
     text-decoration: underline;
     line-height: 2;
 }
@@ -708,19 +704,22 @@ MAINTENANCE ＆ INSPECTION
 .ment-number {
     margin-right: 8px;
 }
-
+.engine_pic {
+    width: 48%;
+    object-fit: cover;
+    box-shadow: 16px 16px 0px #82cbc9a5;
+}
 .meintenance-container1 {
     display: flex;
     justify-content: space-between;
 }
-.meintenance-container1 img,.meintenance-container1 p {
-    width: 48%;
-    object-fit: cover;
-}
-.meintenance-container1 img {
-    box-shadow: 16px 16px 0px #82cbc9a5;
-}
 
+.meintenance-container1 p{
+    width: 48%;
+}
+.enigine {
+    width: 100%;
+}
 .meintenance-container1 p {
     text-align: left;
 }
@@ -730,21 +729,9 @@ MAINTENANCE ＆ INSPECTION
     gap: 2%;
     margin-top: 20px;
 }
-.meintenance-container3 {
-    display: flex;
-
-}
-.ment3-text {
-    width: 50%;
-    margin-left: 5%;
-}
-.meintenance-container3  img {
-    width: 25%;
-    box-shadow: 16px 16px 0px #82cbc9a5;
-    position: relative;
-}
 .ment2-title {
-    font-size: 1.3rem;
+    /* font-size: 2.0rem; */
+    font-weight: bold;
     color: #339390;
     text-decoration: underline;
     margin-bottom: 4px;
@@ -753,16 +740,30 @@ MAINTENANCE ＆ INSPECTION
 .ment2-intro {
     margin-bottom: 40px;
 }
-.base-img {
+.meintenance-container3 {
+    display: flex;
+    justify-content: space-between;
     position: relative;
+
+}
+.ment3-text {
+    width: 50%;
+    margin-left: 5%;
+}
+.transcar1_pic {
+    width: 25%;
+    box-shadow: 16px 16px 0px #82cbc9a5;
     z-index: 1;
 }
-.pile-img {
+.transcar2_pic {
+    width: 25%;
+    box-shadow: 16px 16px 0px #82cbc9a5;
     position: absolute;
     top: 80px;
-    left: -8%;
+    left: 18%;
     z-index: 2;
 }
+
 
 /* ＝＝＝＝＝＝＝＝＝＝＝＝＝
 レシポンシブ設定 
@@ -773,8 +774,23 @@ MAINTENANCE ＆ INSPECTION
         padding: 60px 20px 40px 20px;
     }
     body {
-        font-size: 1.1rem;
+        font-size: 1.6rem;
         line-height: 1.2;
+    }
+    h2{
+        font-size: 2.2rem;
+    }
+    h3{
+        font-size:2.8rem;
+    }
+    h4 {
+        font-size: 2.1rem;
+    }
+    h5 {
+        font-size: 2.0rem;
+    }
+    h6 {
+        font-size: 2.1rem;
     }
 /* ＝＝＝＝header＝＝＝＝＝＝＝＝＝ */
     .header-container {
@@ -789,12 +805,11 @@ MAINTENANCE ＆ INSPECTION
     }
     
     .usedcar-top a{
-        font-size: 0.8rem;
-
+        font-size: 1.4rem;
     }
     #navi {
         padding: 10px 16px;
-        font-size: 0.9rem;
+        font-size: 1.5rem;
     }
 
     #navi ul.nav-menu li  {
@@ -806,17 +821,14 @@ MAINTENANCE ＆ INSPECTION
     }
     
 /* ＝＝＝＝ABOUT US＝＝＝＝＝＝＝＝ */
-    .about-list {
-        font-size: 1.0rem;
-    }
 
     .business {
         margin-bottom: 40px;
         padding: 20px;
     }
-    h5 {
-        font-size: 1.2rem;
-    }
+.about-list {
+    width: 24%;
+}
 /* ＝＝＝＝SERVICE＝＝＝＝＝＝＝＝ */
 .service-list {
     grid-template-columns: repeat(3, 1fr);
@@ -825,31 +837,16 @@ MAINTENANCE ＆ INSPECTION
     padding: 20px;
 }
 .number-name {
-    font-size: 1.2rem;
-}
-.subservice-text {
-    font-size: 1.0rem;
-}
-/* ＝＝＝＝EXPORT＝＝＝＝＝＝＝＝ */
-.export-contain {
-    flex-direction: column;
-}
-.export-contain img, .export-text{
-    width: 100%;
-    margin-bottom: 28px;
-}
-.sdgs-text {
-    font-size: 2vw;
+    font-size: 2.0rem;
 }
 /* ＝＝＝＝ACCESS＝＝＝＝＝＝＝＝ */
     .address-container {
         line-height: 1.3;
     }
     .company span{
-        font-size: 1.3rem;
+        font-size: 2.0rem;
     }
     .footer-menu {
-        font-size: 1.0rem;
         grid-template-columns: repeat(4, 1fr);
     }
 
@@ -861,7 +858,6 @@ MAINTENANCE ＆ INSPECTION
 }
 @media(max-width: 820px){
     .about-text {
-        font-size: 2.3vw;
         text-align: left;
     }
     .about-text br {
@@ -880,57 +876,72 @@ MAINTENANCE ＆ INSPECTION
         padding: 40px 10px;
     }
     body {
-        font-size: 0.9rem;
-        line-height: 1.2;
+        font-size: 1.6rem;
     }
-    h3 {
-        font-size: 1.3rem;
+    h2{
+        font-size: 2.2rem;
+    }
+    h3{
+        font-size:2.2rem;
     }
     h4 {
-        font-size: 1.0rem;
+        font-size: 1.6rem;
+        margin-bottom: 30px
+    }
+    h5 {
+        font-size: 1.6rem;
+    }
+    h6 {
+        font-size: 1.7rem;
     }
     
 /* ＝＝＝＝header＝＝＝＝＝＝＝＝＝ */
     .header-container {
         padding: 4px 10px;
     }
-    .mainvisual {
-        font-size: 1rem;
-    }
+
     .usedcar-top {
         display: none;
     }
-    .about-list {
-        font-size: 0.8rem;
-        width:22%;
+    .catch-phrase1, .catch-phrase2 {
+        width: 100%;
+        left: 0;
+        text-align: center;
     }
     .about-text {
-        font-size: 2.5vw;
         text-align: left;
     }
     .about-text br {
         display: none;
     }
-
+    .about-list {
+        font-size: 2.0vw;
+    }
     .about-list img{
         max-width: 60%;
     }
     .business {
         padding: 20px 10px;
     }
-
+    .business-btn{
+        font-size: 1.4rem;
+        /* border-radius: 10px; */
+    }
+    .number-text {
+        font-size: 2.4vw;
+    }
     .service-list {
         grid-template-columns: repeat(3, 1fr);
     }
     .icon-title {
-        font-size: 2.8vw;
+        font-size: 1.4rem;
     }
     .inner {
         flex-direction: column;
     }
     .subservice-text {
-        font-size: 0.9rem;
         width: 100%;
+        order: 2;
     }
     .subservice-text p {
         margin-bottom: 10px;
@@ -938,25 +949,32 @@ MAINTENANCE ＆ INSPECTION
     .subservice-text a{
         padding: 5px 0;
     }
-    .slide-img {
+    .slide_pic {
         width: 100%;
         order: 1;
+    }
+    .slide-img {
+        width: 100%;
+        /* order: 1; */
         margin: 20px 0 10px 0;
     }
-    .sdgs-text {
-        font-size: 2.8vw;
-        /* text-align: left; */
+    .various-text {
+        font-size: 2.6vw;
     }
-
+    .export-text {
+        font-size: 2.4vw;
+    }
+    .sdgs-text {
+        font-size: 2.6vw;
+        text-align: left;
+    }
     .address-container {
         flex-direction: column;
-
     }
     .address {
         padding: 0 ; 
     }
 /* ＝＝＝＝ map＝＝＝＝ */
-
     .map {
         position: relative;
         margin-bottom: 20px;
@@ -976,9 +994,7 @@ MAINTENANCE ＆ INSPECTION
     }
     
 /* ＝＝＝meintenance＝＝＝ */
-.meintenance-title {
-    font-size: 1.3rem;
-}
+
 .meintenance-container1 img,.meintenance-container1 p {
     width: 46%;
     object-fit: cover;
@@ -996,55 +1012,62 @@ MAINTENANCE ＆ INSPECTION
         padding: 40px 5px;
     }
     body {
-        font-size: 3vw;
-        line-height: 1.2;
+        font-size: 1.4rem;
+    }
+    h2 {
+        font-size: 2.0rem;
+    }
+    h3 {
+        font-size: 1.8rem;
+    }
+    h4 {
+        font-size: 1.6rem;
+    }
+    h5 {
+        font-size: 1.4rem;
     }
 /* ＝＝＝＝header＝＝＝＝＝＝＝＝＝ */
     .header-container {
         padding: 5px 10px;
     }
-
+    .site-title {
+        max-width: 65%;
+    }
+    #navi {
+        font-size: 1.4rem;
+        padding: 4px 8px;
+    }
     .container {
         padding: 40px 10px;
-    }
-    .mainvisual {
-        font-size: 3vw;
-    }
-    .catch-phrase1, .catch-phrase2 {
-        left: 18%;
-        text-align: center;
     }
 
     .business {
         padding: 10px 16px;
     }
-    .list-title1, .list-title2 {
-        font-size: 1.8vw;
+    .business-intro {
+        flex-direction: column;
     }
+    .business {
+        width: 100%;
+        padding: 20px 30px;
+        margin-bottom: 20px;
+    }
+    .list-title1, .list-title2 {
+        font-size: 2.4vw;
+    }
+
     .number-text {
         margin: 8px 0;
     }
     .about-logo {
         margin: 16px 0 28px 0;
     }
-    
-    .about-logo h5 {
-        font-size: 3.6vw;
+    .icon-title {
+        font-size: 2.8vw;
     }
-    
     .about-logo .business-btn {
         padding: 4px 6px;
-        font-size: 2.5vw;
     }
-    
-    .about-logo .business img {
-        margin: 10px 0;
-    }
-    
-    .about-logo .number-text {
-        font-size: 2.5vw;
-    }
-        
     .service-list {
         grid-template-columns: 1fr 1fr 1fr;
     }
@@ -1053,25 +1076,59 @@ MAINTENANCE ＆ INSPECTION
     }
 
     .subservice-text {
-        font-size: 3.2vw;
+        font-size: 1.6rem;
+    }
+    .various-text br {
+        display:none;
     }
     .various-text {
+        font-size: 1.4rem;
         text-align: left;
     }
+    .export-contain {
+        flex-direction: column-reverse;
+    }
+    
+    .export-text {
+        font-size: 1.4rem;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 16px;
+    }
+    .export_pic {
+        width: 100%;
+        object-fit: cover;
+    }
+    .announce {
+        text-align: left;
+    }
+    .sdgs-text{
+        font-size: 1.4rem;
+        padding-bottom: 20px;
+    }
+    .sdgs-text br{
+        display: none;
+    }
+    .company span {
+        font-size: 1.6rem;
+    }
     .footer-menu {
-        font-size: 0.9rem;
+        font-size: 1.3rem;
     }
     #meintenance {
-        padding: 60px 0 0 0;
+        padding: 20px 0 0 0;
+    }
+    .meintenamce-text {
+        margin-bottom: 20px;
+        text-align: left;
+    }
+    
+    .meintenance-item {
+
+        text-align: left;
     }
     .meintenance-title {
-        font-size: 4vw;
-        width: 40%;
+        width: 50%;
     }
-    .ment2-title {
-        font-size: 3vw;
-    }
-    .pile-img {
-        top: 40px;
-    }
+
 }
