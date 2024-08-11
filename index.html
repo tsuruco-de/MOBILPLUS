@@ -6,7 +6,7 @@
     <title>MOBIL PLUS</title>
     <meta name="description" content="テキストテキストテキストテキストテキストテキストテキストテキス">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="#">
+    <link rel="icon" href="img/favicon.png">
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,18 +21,18 @@
         <div class="header-container">
             <h1 class="site-title">
                 <a class="site-logo" href="index.html">
-                    <img class="logo" src="img/logo.png" alt="モービルプラスロゴ">
-                    <img class="logo-text" src="img/logo-text.png" alt="mobil plus">
-                </a>
-                <a href="index.html">
+                    <picture class="header_pic">
+                        <source srcset="img/header-logo.webp" type="image/webp">
+                        <img loading="lazy" src="/img/header-logo" alt="モービルプラスロゴ" class="header-logo">
+                    </picture>
                 </a>
             </h1>
             <div class="header-menu">
-                <button class="usedcar-top">
+                <div class="usedcar-top">
                     <a href="https://www.goo-net.com/usedcar_shop/0804261/stock.html" target="_blank">
                         中古車販売はこちら
                     </a>
-                </button>
+                </div>
                 <nav id="navi">
                     <ul class="nav-menu">
                         <li><a href="index.html#about">わたしたちについて</a></li>
@@ -59,55 +59,77 @@
             <h2 class="catch-phrase1">Welcome to MOBILE PLUS</h2>
             <h2 class="catch-phrase2">
                 私たちはお客様の目線で寄り添う
-                <br>トータルカーアドバイザーです。</h2>
+                <br>トータルカーアドバイザーです</h2>
         </div>
         <section id="about">
             <div class="container">
                 <h3 class="section-title">わたしたちについて</h3>
                 <h4 class="english-title">ABOUT US</h4>
                 <div class="about-text">
-                    モービルプラスでは「万が一に備えて」または「困った！」の要望を親身になって対応致します。
+                    <p>モービルプラスでは「万が一に備えて」または「困った！」の要望を親身になって対応致します。
                     <br>もし、緊急事態がおとずれた際には的確な判断で対応し、
                     <p class="spaced-paragraph">駆けつけ要請の場合には、即座に対応・応急処置を施します。</p>
                     お客様に安心感を与え、「駆けつけてくれてよかった！」と思っていただける、
-                    <br>そんな想いを込めて日々業務に取り組んで参ります。
+                    <br>そんな想いを込めて日々業務に取り組んで参ります。</p>
                 </div>
                 <ul class="about-logo fadein">
                     <li class="about-list">
                         <div class="list-title1">親身な対応</div>
-                        <img src="img/aboutus1.png" alt="親身な対応">
+                        <picture class="aboutus1_pic">
+                            <source srcset="img/aboutus1.webp" type="image/webp">
+                            <img loading="lazy" src="img/aboutus1.png" alt="親身な対応" class="aboutus1_img">
+                        </picture>
                     </li>
                     <li class="about-list">
                         <div class="list-title1">緊急時の即応力</div>
-                        <img src="img/aboutus2.png" alt="緊急時の即応力">
+                        <picture>
+                            <source srcset="img/aboutus2.webp" type="image/webp">
+                            <img loading="lazy" src="img/aboutus2.png" alt="緊急時の即応力">
+                        </picture>
                     </li>
                     <li class="about-list">
                         <div class="list-title1">安心感のご提供</div>
-                        <img src="img/aboutus3.png" alt="安心感">
+                        <picture>
+                            <source srcset="img/aboutus3.webp" type="image/webp">
+                            <img loading="lazy" src="img/aboutus3.png" alt="安心感">
+                        </picture>
                     </li>
                     <li class="about-list">
                         <div class="list-title2">信頼できる<br>アフターサービス</div>
-                        <img src="img/aboutus4.png" alt="アフターサービス">
+                        <picture>
+                            <source srcset="img/aboutus4.webp" type="image/webp">
+                            <img loading="lazy" src="img/aboutus4.png" alt="アフターサービス">
+                        </picture>
                     </li>
                 </ul>
                 <div class="business-title">
-                    <img src="img/car-logo.png" alt="自動車" class="car-logo">
-                    <span>事業紹介</span>
+                    <picture class="car_pic">
+                        <source srcset="img/car-logo.webp" type="image/webp">
+                        <img loading="lazy" src="img/car-logo.png" alt="自動車" class="car-logo">
+                    </picture>
+                        <span>事業紹介</span>
                 </div>
                 <div class="business-intro">
                     <div class="business">
                         <h5>整備・点検</h5>
-                        <img src="img/business1.png" alt="整備・点検">
-                        <button class="business-btn"><a href="meintenance.html">整備・点検の詳細はこちら</a></button>
+                        <picture>
+                            <source srcset="img/business1.webp" type="image/webp">
+                            <img loading="lazy" src="img/business1.png" alt="整備・点検">
+                        </picture>
+                        <div class="business-btn">
+                            <a href="meintenance.html">整備・点検の詳細はこちら</a></div>
                     </div>
                     <div class="business">
                         <h5>中古車販売</h5>
-                        <img src="img/business2.png" alt="中古車販売">
-                        <button class="business-btn">
+                        <picture>
+                            <source srcset="img/business2.webp" type="image/webp">
+                            <img loading="lazy" src="img/business2.png" alt="中古車販売">
+                        </picture>
+                        <div class="business-btn">
                             <a href="https://www.goo-net.com/usedcar_shop/0804261/stock.html" target="_blank">
                                 中古車販売の詳細はこちら
                             </a>
-                        </button>
+                        </div>
                     </div>
                 </div>
                 <div class="number-title">適格請求書発行事業者登録番号を取得</div>
@@ -125,27 +147,45 @@
                 <ul class="service-list delayscroll">
                     <li class="icon floatUp">
                         <p class="icon-title">自動車修理</p>
-                        <img src="img/service1.png" alt="自動車修理">
+                        <picture>
+                            <source srcset="img/service1.webp" type="image/webp">
+                            <img loading="lazy" src="img/service1.png" alt="自動車修理">
+                        </picture>
                     </li>
                     <li class="icon floatUp">
                         <p class="icon-title">12カ月点検</p>
-                        <img src="img/service2.png" alt="12カ月点検">
+                        <picture>
+                            <source srcset="img/service2.webp" type="image/webp">
+                            <img loading="lazy" src="img/service2.png" alt="12カ月点検">
+                        </picture>
                     </li>
                     <li class="icon floatUp">
                         <p class="icon-title">バッテリー交換</p>
-                        <img src="img/service3.png" alt="バッテリー交換">
+                        <picture>
+                            <source srcset="img/service3.webp" type="image/webp">
+                            <img loading="lazy" src="img/service3.png" alt="バッテリー交換">
+                        </picture>
                     </li>
                     <li class="icon floatUp">
                         <p class="icon-title">電装品<br>取り付け</p>
-                        <img src="img/service4.png" alt="電装品取り付け">
+                        <picture>
+                            <source srcset="img/service4.webp" type="image/webp">
+                            <img loading="lazy" src="img/service4.png" alt="電装品取り付け">
+                        </picture>
                     </li>
                     <li class="icon floatUp">
                         <p class="icon-title">コーティング</p>
-                        <img src="img/service5.png" alt="コーティング">
+                        <picture>
+                            <source srcset="img/service5.webp" type="image.webp">
+                            <img loading="lazy" src="img/service5.png" alt="コーティング">
+                        </picture>
                     </li>
                     <li class="icon floatUp">
                         <p class="icon-title">自動車保険</p>
-                        <img src="img/service6.png" alt="自動車保険">
+                        <picture>
+                            <source srcset="img/service6.webp" type="image.webp">
+                            <img loading="lazy" src="img/service6.png" alt="自動車保険">
+                        </picture>
                     </li>
                 </ul>
             </div>
@@ -159,11 +199,14 @@
                             <div class="sub-number">01</div>
                             <div class="service-name">重整備対応</div>
                         </div>
-                        <img src="img/engine.jpg" alt="エンジン" class="slide-img">
                         <div class="subservice-text">
                             <p>エンジンのオーバーホールなどの重整備も対応しております。</p>
                             <a href="meintenance.html#meintenance1" class="bgleft"><span>詳細はこちら</span></a>
                         </div>
+                        <picture class="slide_pic">
+                            <source srcset="img/engine.webp" type="image.webp">
+                            <img loading="lazy" src="img/engine.jpg" alt="エンジン" class="slide-img">
+                        </picture>
                     </div>
                 </div>
                 <div class="service-item fadein">
@@ -172,11 +215,14 @@
                             <div class="sub-number">02</div>
                             <div class="service-name">テスター完備</div>
                         </div>
-                        <img src="img/tester.jpg" alt="テスター" class="slide-img">
                         <div class="subservice-text">
                             <p>各メーカー対応テスター完備で安心のアフターサポート</p>
                             <a href="meintenance.html#meintenance2" class="bgleft"><span>詳細はこちら</span></a>
                         </div>
+                        <picture class="slide_pic">
+                            <source srcset="img/tester.webp" type="image/webp">
+                            <img loading="lazy" src="img/tester.jpg" alt="テスター" class="slide-img">
+                        </picture>
                     </div>
                 </div>
                 <div class="service-item fadein">
@@ -185,11 +231,14 @@
                             <div class="sub-number">03</div>
                             <div class="service-name">積載車保有</div>
                         </div>
-                        <img src="img/transporter.jpg" alt="積載車" class="slide-img">
                         <div class="subservice-text">
                             <p>フルフラット車載部搭載の積載車を保有</p>
                             <a href="meintenance.html#meintenance3" class="bgleft"><span>詳細はこちら</span></a>
                         </div>
+                        <picture class="slide_pic">
+                            <source srcset="img/transporter.webp" type="image/webp">
+                            <img loading="lazy" src="img/transporter.jpg" alt="積載車" class="slide-img">
+                        </picture>
                     </div>
                 </div>
             </div>
@@ -202,7 +251,10 @@
                     モービルプラスでは各種メーカーを取り扱いすることにより、
                     <br>普段のメンテナンスから万が一の事故等の際にも安心してお任せいただけます。
                 </div>
-                <img class="various-img" src="img/various.png" alt="取り扱いメーカー">
+                <picture>
+                    <source srcset="img/various.webp" type="image/webp">
+                    <img loading="lazy" class="various-img" src="img/various.png" alt="取り扱いメーカー">
+                </picture>
             </div>
         </section>
         <section id="export">
@@ -210,7 +262,10 @@
                 <h3 class="section-title">輸出事業</h3>
                 <h4 class="english-title">EXPORT BUSINESS</h4>
                 <div class="export-contain">
-                    <img src="img/export.jpg" alt="輸出事業">
+                    <picture class="export_pic">
+                        <source srcset="img/export.webp" type="image/webp">
+                        <img loading="lazy" class="export_img" loading="lazy" src="img/export.jpg" alt="輸出事業">
+                    </picture>
                     <div class="export-text">
                         <p class="spaced-paragraph">モービルプラスは、国内での車両販売および車両整備をメインとして、
                         海外に中古自動車を販売している輸出企業様向けのコンディションチェック、
@@ -225,7 +280,10 @@
                 <h3 class="section-title">中古車販売</h3>
                 <h4 class="english-title">USED CAR SALE</h4>
                 <a href="https://www.goo-net.com/usedcar_shop/0804261/stock.html" target="_blank">
-                    <img src="img/usedcar-logo.png" alt="中古車販売" class="used-img">
+                    <picture>
+                        <source srcset="img/usedcar-logo.webp" type="image/webp">
+                        <img loading="lazy" src="img/usedcar-logo.png" alt="中古車販売" class="used-img">
+                    </picture>
                 </a>
                 <div class="announce">モービルプラス販売中古車情報はこちらからお願いいたします。</div>
             </div>
@@ -235,6 +293,7 @@
                 <h3 class="section-title">モービルプラスSDGs宣言</h3>
                 <h4 class="english-title">Declaration for SDGs</h4>
                 <div class="sdgs-text">
+                    <div class="sdgs_bg"></div>
                     <p class="spaced-paragraph">リサイクル部品を使って修理をすることで、製造、流通の際に排出されるCO2を抑えることができます。</p>
                     多くの人に自動車リサイクル部品を利用してもらうための情報発信を行い、
                     <br>廃棄物の抑制やCO2削減に貢献します。
@@ -251,7 +310,6 @@
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4683.9545366292305!2d130.97654411292044!3d33.888211168788324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3543959595754375%3A0xcf2fe382b6c7441b!2z44Oi44O844OT44Or44OX44Op44K5!5e0!3m2!1sja!2sjp!4v1722150287651!5m2!1sja!2sjp" 
                         width="480" height="450"
                         style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-
                         </iframe>
                     </div>
                     <div class="address">
@@ -283,7 +341,10 @@
                 <li><a href="index.html#access">アクセス</a></li>
             </ul>
             <a href="index.html" class="footer-logo">
-                <img src="./img/full-logo.png" alt="北九州の自動車整備工場">
+                <picture>
+                    <source srcset="img/full-logo.webp" type="image/webp">
+                    <img loading="lazy" src="./img/full-logo.png" alt="北九州の自動車整備工場">
+                </picture>
             </a>
         </div>
         <div class="copy-light">© 2024 MOBIL PLUS</div>
