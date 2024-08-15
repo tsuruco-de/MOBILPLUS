@@ -705,9 +705,9 @@ MAINTENANCE ＆ INSPECTION
     margin-right: 8px;
 }
 .engine_pic {
-    width: 48%;
+    width: 47%;
     object-fit: cover;
-    box-shadow: 16px 16px 0px #82cbc9a5;
+    /* margin-right: 6%; */
 }
 .meintenance-container1 {
     display: flex;
@@ -716,18 +716,21 @@ MAINTENANCE ＆ INSPECTION
 
 .meintenance-container1 p{
     width: 48%;
-}
-.enigine {
-    width: 100%;
-}
-.meintenance-container1 p {
     text-align: left;
+}
+.engine {
+    width: 100%;
+    vertical-align: bottom;
+    box-shadow: 16px 16px 0px #82cbc9a5;
 }
 .meintenance2-img {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2%;
+    gap: 3%;
     margin-top: 20px;
+}
+.meintenance2-img img{
+    box-shadow: 10px 10px 0px #82cbc9a5;
 }
 .ment2-title {
     /* font-size: 2.0rem; */
@@ -743,27 +746,27 @@ MAINTENANCE ＆ INSPECTION
 .meintenance-container3 {
     display: flex;
     justify-content: space-between;
-    position: relative;
-
 }
 .ment3-text {
-    width: 50%;
-    margin-left: 5%;
+    width: 37%;
+    margin-right: 3%;
+}
+.transcar_pic {
+    width: 60%;
+    display: flex;
 }
 .transcar1_pic {
-    width: 25%;
-    box-shadow: 16px 16px 0px #82cbc9a5;
-    z-index: 1;
+    width: 100%;
+    margin-right: 20px;
+
 }
 .transcar2_pic {
-    width: 25%;
-    box-shadow: 16px 16px 0px #82cbc9a5;
-    position: absolute;
-    top: 80px;
-    left: 18%;
-    z-index: 2;
+    width: 100%;
 }
-
+.pile-img, .base-img {
+    vertical-align: bottom;
+    box-shadow: 10px 10px 0px #82cbc9a5;
+}
 
 /* ＝＝＝＝＝＝＝＝＝＝＝＝＝
 レシポンシブ設定 
@@ -995,10 +998,13 @@ MAINTENANCE ＆ INSPECTION
     
 /* ＝＝＝meintenance＝＝＝ */
 
-.meintenance-container1 img,.meintenance-container1 p {
-    width: 46%;
+.meintenance-container1 img{
+    width: 100%;
     object-fit: cover;
 }
+/* .meintenance-container1 p {
+    max-width: 48%;
+} */
 .pile-img {
     top: 48px;
 }
@@ -1124,14 +1130,34 @@ MAINTENANCE ＆ INSPECTION
     }
     
     .meintenance-item {
-
         text-align: left;
     }
     .meintenance-title {
         width: 50%;
     }
-
-    .pile-img {
-        top: 40px;
+    .meintenance-container1 {
+        flex-direction: column-reverse;
+    }
+    .engine_pic {
+        width: 95%;
+    }
+    .meintenance-container1 p {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+    .meintenance2-img {
+        grid-template-columns: repeat(2, 2fr);
+        gap: 7%;
+    }
+    .meintenance-container3 {
+        flex-direction: column;
+    }
+    .transcar_pic {
+        width: 100%;
+    }
+    .ment3-text {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
     }
 }
